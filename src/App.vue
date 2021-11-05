@@ -11,15 +11,15 @@
 	import ScreenTraining from './components/ScreenTraining.vue'
 
 	export default {
-			name: 'App',
-			data() {
-					return config;
-			},
-			components: {
-					ScreenStart,
-					ScreenReady,
-					ScreenTraining
-			}
+		name: 'App',
+		data() {
+			return config;
+		},
+		components: {
+			ScreenStart,
+			ScreenReady,
+			ScreenTraining
+		}
 	}
 </script>
 
