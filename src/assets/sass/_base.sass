@@ -1,0 +1,196 @@
+/*===============  Base  ===============*/
+
+*
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    &:before, &:after
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box
+
+*::-webkit-input-placeholder
+    color: $color-placeholder
+    opacity: 1
+
+*:-moz-placeholder
+    color: $color-placeholder
+    opacity: 1
+
+*::-moz-placeholder
+    color: $color-placeholder
+    opacity: 1
+
+*:-ms-input-placeholder
+    color: $color-placeholder
+    opacity: 1
+
+html
+    height: 100%
+    font-size: $fz-base + px
+    line-height: $lh-base
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+    color: $color-danger
+body input:required:valid,
+body textarea:required:valid
+    color: $color-success
+
+body
+    display: flex
+    flex-direction: column
+    height: 100%
+    position: relative
+    font-family: $font-default
+    overflow-x: hidden
+    color: $color-text
+    font-size: $fz-base + px
+    line-height: $lh-base
+
+h1, h2, h3, h4, h5, h6, p, ul, table, figure
+    &+h2, &+h3, &+h4, &+h5, &+h6, &+p, &+ul, &+table
+        margin: 1rem 0 0 0
+
+
+h1, h2, h3, h4, h5, h6
+    font-weight: 700
+    margin-bottom: 0 
+
+h1
+    +fz(64)
+
+h2
+    +fz(48)
+
+h3
+    +fz(32)
+
+h4
+    +fz(24)
+
+h5
+    +fz(18)
+
+h6
+    +fz(16)
+
+ul
+    padding-left: 1em
+    list-style: none
+    li
+        position: relative
+        &::before
+            content: "•"
+            display: inline-block
+            position: absolute
+            color: inherit
+            left: -1em
+            font-weight: 700
+    &.unstyled
+        margin: 0
+        padding: 0
+        li
+            &::before
+                content: none
+
+a
+    color: $color-link
+    &:hover
+        color: darken($color-link, 10%)
+
+.contents
+    position: relative
+    display: flex
+    align-items: center
+    box-sizing: border-box
+    height: 100%
+    width: 100%
+    background-color: #000
+
+.btn
+    display: inline-flex
+    align-items: center
+    font-size: 2em
+    line-height: 1
+    height: 44px
+    border-radius: 22px
+    padding: 0 22px
+    background-color: rgba(255, 255, 255, 0.168)
+    color: #fff
+    cursor: pointer
+
+.btn.btn_start
+    font-size: 3em
+    height: 56px
+    border-radius: 28px
+    color: rgb(34, 232, 107)
+    background-color: transparent
+    border: 2px solid rgb(34, 232, 107)
+
+// .btn.btn_reset
+//     color: rgb(230, 79, 83)
+//     background-color: rgba(230, 79, 83, 0.368)
+
+.btn.btn_job
+    color: rgb(232, 119, 38)
+    background-color: rgba(232, 119, 38, 0.368)
+
+.btn.btn_relax
+    color: rgb(34, 232, 107)
+    background-color: rgba(34, 232, 107, 0.268)
+
+.content-ready
+    text-align: center
+    color: #fff
+    font-size: 12em
+
+.text-job
+    color: rgb(232, 119, 38)
+
+.text-relax
+    color: rgb(34, 232, 107)
+
+.content-center
+    width: 100%
+
+.content-timer
+    margin: auto
+    padding-top: 0.4em
+    padding-bottom: 0.4em
+    text-align: center
+    font-size: 5em
+    line-height: 1
+
+.content-reset,
+.content-btn
+    text-align: center
+
+.content-top,
+.content-bottom
+    text-align: center
+    position: absolute
+    left: 0
+    right: 0
+    color: #fff
+    
+
+.content-top
+    top: 0
+    padding-top: 2em
+
+.content-bottom
+    bottom: 0
+    padding-bottom: 2em
+
+.content-status__val
+    font-size: 2em
+
+.content-status__val.content-status__val_relax
+    color: rgb(34, 232, 107)
+
+.content-status__val.content-status__val_job
+    color: rgb(232, 119, 38)
+
+.content-bottom__statistic
+    font-size: 2em
